@@ -21,6 +21,23 @@ p{
     color: #B19f9E;
 }
 
+nav{
+     text-align: right;
+   
+}
+
+nav a{
+    color: #CEBC81;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+nav a:hover{
+    color: #A16E83;
+    text-decoration: underline; 
+}
+
 main h1{
     text-align: center;
 }
@@ -47,11 +64,14 @@ main h1{
 .about a{
     font-family: 'Roboto', sans-serif;
     color: #B19f9E;
+    text-decoration: none;
 }
 
 .about a:hover{
     color: #A16E83;
+    text-decoration: underline;
 }
+
 
 .personal{
     display: flex;
