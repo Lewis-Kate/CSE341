@@ -37,7 +37,7 @@ session_start();
         
          </div>
     
-             <button> <a href="checkout.html">Continue to Checkout</a>  </button>
+             <button> <a href="checkout.php">Continue to Checkout</a>  </button>
     
 </div>
   

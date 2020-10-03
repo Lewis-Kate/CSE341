@@ -20,7 +20,7 @@ session_start();
 <nav>
     <a href="index.html"><img src="images/logo.png" alt="candy logo" width="200"></a>
     <a href="index.html"> <h1>The Sweet Shop</h1></a>
-    <a href="cart.html"><i class='fas fa-shopping-cart'></i></a> 
+    <a href="cart.php"><i class='fas fa-shopping-cart'></i></a> 
 </nav> 
     
     
@@ -87,7 +87,7 @@ if (isset($_POST['email'])) {
         
         <div class="center">
         
-                  <button> <a href="confirmation.html">Submit Order</a>  </button>
+                  <button> <a href="confirmation.php">Submit Order</a>  </button>
         </div>
             
     
