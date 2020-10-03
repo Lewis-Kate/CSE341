@@ -29,11 +29,7 @@ session_start();
         
         <?php
           echo <div class=/"summary"/>;
-          echo $_SESSION[“hard_candy”]
-          echo $_SESSION[“chocolate”]
-          echo $_SESSION[“gummy_bears”]
-          echo $_SESSION[“sourpatch”]
-          echo $_SESSION[“chocolate_bar”]
+          echo $_SESSION[“Submit”]
           echo </div>;
         ?>
     
