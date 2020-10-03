@@ -18,7 +18,7 @@ session_start();
 <nav>
   <img src="images/logo.png" alt="candy logo" width="200">
    <h1>The Sweet Shop</h1>
-    <a href="cart.html"><i class='fas fa-shopping-cart'></i></a> 
+    <a href="cart.php"><i class='fas fa-shopping-cart'></i></a> 
 </nav> 
     
     
