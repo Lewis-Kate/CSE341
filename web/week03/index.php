@@ -56,6 +56,8 @@ session_start();
  $_SESSION['Submit'] = $_POST['Submit'];
  
  } 
+        
+         print_r($_SESSION)
 ?> 
     </div>
     </div>
