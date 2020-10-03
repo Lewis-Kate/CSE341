@@ -28,13 +28,13 @@ session_start();
         <p>Order Summary:</p>
         
         <?php
-          echo <div class=/"summary"/>
+          echo <div class=/"summary"/>;
           echo $_SESSION[“hard_candy”]
           echo $_SESSION[“chocolate”]
           echo $_SESSION[“gummy_bears”]
           echo $_SESSION[“sourpatch”]
           echo $_SESSION[“chocolate_bar”]
-          echo </div>
+          echo </div>;
         ?>
     
              <button> <a href="checkout.html">Continue to Checkout</a>  </button>
