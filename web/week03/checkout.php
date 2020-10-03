@@ -1,3 +1,9 @@
+<?php
+// Start the session
+session_start();
+?>
+
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -42,6 +48,39 @@
     
     <input type="email" id="email" name="email" placeholder="Email Address"><br>
         </form>
+        
+        <?php 
+ if (isset($_POST['fname'])) { 
+ $_SESSION['fname'] = $_POST['fname']; 
+ } 
+
+ if (isset($_POST['lname'])) { 
+ $_SESSION['lname'] = $_POST['lname']; 
+ } 
+        
+if (isset($_POST['stadd'])) { 
+ $_SESSION['stadd'] = $_POST['stadd']; 
+ } 
+        
+if (isset($_POST['city'])) { 
+ $_SESSION['city'] = $_POST['city']; 
+ }
+        
+if (isset($_POST['state'])) { 
+ $_SESSION['state'] = $_POST['state']; 
+ }
+    
+if (isset($_POST['phone'])) { 
+ $_SESSION['phone'] = $_POST['phone']; 
+ }
+        
+if (isset($_POST['email'])) { 
+ $_SESSION['email'] = $_POST['email']; 
+ }
+        
+         print_r($_SESSION)
+
+?> 
         
 
     </div>

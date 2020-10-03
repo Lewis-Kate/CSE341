@@ -24,17 +24,16 @@ session_start();
     
     <div id="cart">
      <h2>Cart</h2>
-        
-        <p>Order Summary:</p>
+                
         
   <div class="summary">    
-        
+        <h3>Order Summary:</h3>
    
-       <p>Hard Candy:</p> <?php echo $_SESSION['hard_candy'];?>
-        <p>Chocolate:</p> <?echo $_SESSION['chocolate'];?>
-       <p>Gummy Bears:</p> <? echo $_SESSION['gummy_bears'];?>
-        <p>Sour Candies:</p> <? echo $_SESSION['sourpatch'];?>
-        <p>Chocolate Bars:</p> <?echo $_SESSION['chocolate_bar'];?>
+       <p>Hard Candy: <?php echo $_SESSION['hard_candy'];?></p>
+        <p>Chocolate: <?echo $_SESSION['chocolate'];?></p>
+       <p>Gummy Bears: <? echo $_SESSION['gummy_bears'];?></p>
+        <p>Sour Candies: <? echo $_SESSION['sourpatch'];?></p>
+        <p>Chocolate Bars: <?echo $_SESSION['chocolate_bar'];?></p>
         
          </div>
     

@@ -23,7 +23,23 @@
     
     <div class="center">
     <h2>Order Confirmation</h2>
+       
         <p>Thanks for your order!</p>
+        <p>Hard Candy: <?php echo $_SESSION['hard_candy'];?></p>
+        <p>Chocolate:<?echo $_SESSION['chocolate'];?></p> 
+       <p>Gummy Bears:<? echo $_SESSION['gummy_bears'];?></p> 
+        <p>Sour Candies: <? echo $_SESSION['sourpatch'];?></p>
+        <p>Chocolate Bars:<?echo $_SESSION['chocolate_bar'];?></p> 
+        
+    <h2>Shipping to:</h2>
+         <p>First Name:<?php echo $_SESSION['fname'];?></p> 
+        <p>Last Name:<?php echo $_SESSION['lname'];?></p> 
+        <p>Street Address:<?php echo $_SESSION['stadd'];?></p> 
+        <p>City:<?php echo $_SESSION['city'];?></p> 
+        <p>State:<?php echo $_SESSION['state'];?></p> 
+        <p>Phone:<?php echo $_SESSION['phone'];?></p> 
+        <p>Email:<?php echo $_SESSION['email'];?></p> 
         </div>
+    
         
     </main>
