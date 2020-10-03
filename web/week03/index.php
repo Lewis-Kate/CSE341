@@ -73,6 +73,9 @@ if (isset($_POST['chocolate_bar'])) {
  }
         
          print_r($_SESSION)
+             
+             if (isset($_POST['Submit'])) { 
+ $_SESSION['Submit'] = $_POST['Submit'];
 ?> 
     </div>
     </div>
