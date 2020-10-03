@@ -25,9 +25,10 @@ session_start();
 
 <main>
 
-    
+    <div class="center">
+            <h2> Sweets</h2>
     <div id="candy">
-    <h2> Sweets</h2>
+
    
     <form action="index.php" method="post">
     <img src="images/hard_candy.png" alt="candy image" width="300">
@@ -46,31 +47,17 @@ session_start();
     <img src="images/chocolate_bar.png" alt="candy image" width="300">
     <input id="candy_input" name="chocolate_bar" placeholder="Enter Amount">
         
-    <input type="submit" name="Submit" value="Submit!" />    
+    <input type="submit" name="Submit" value="Submit" />    
        
         </form>
         
         <?php 
  if (isset($_POST['Submit'])) { 
- $_SESSION['hard_candy'] = $_POST['hard_candy'];
- } 
-
-if (isset($_POST['Submit'])) { 
- $_SESSION['chocolate'] = $_POST['chocolate'];
- } 
-
-if (isset($_POST['Submit'])) { 
- $_SESSION['gummy_bears'] = $_POST['gummy_bears'];
- } 
-
-if (isset($_POST['Submit'])) { 
- $_SESSION['sourpatch'] = $_POST['sourpatch'];
- } 
-
-if (isset($_POST['Submit'])) { 
- $_SESSION['chocolate_bar'] = $_POST['chocolate_bar'];
+ $_SESSION['Submit'] = $_POST['Submit'];
+ 
  } 
 ?> 
+    </div>
     </div>
     
     

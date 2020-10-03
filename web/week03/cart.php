@@ -19,7 +19,7 @@
     
     <div id="cart">
      <h2>Cart</h2>
-            <p>Hard Candy:</p><?php echo $_POST["hard_candy"]; ?><br>
+            <p>Hard Candy:<?php echo $_POST["hard_candy"]; ?><br>
             <p>Chocolate:</p><?php echo $_POST["chocolate"]; ?><br>
             <p>Gummy Bears:</p><?php echo $_POST["gummy_bears"]; ?><br>
             <p>Sour Candies:</p><?php echo $_POST["sourpatch"]; ?><br>

@@ -116,3 +116,7 @@ button:hover{
     flex-flow: column nowrap;
     align-items: center;
 }
+
+.center{
+    text-align: center;
+}
