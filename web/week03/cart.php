@@ -30,11 +30,11 @@ session_start();
   <div class="summary">    
         
    <?php
-        echo $_SESSION[“hard_candy”]; 
-        echo $_SESSION[“chocolate”];
-        echo $_SESSION[“gummy_bears”];
-        echo $_SESSION[“sourpatch”];
-        echo $_SESSION[“chocolate_bar”];
+        echo $_SESSION['hard_candy']; 
+        echo $_SESSION['chocolate'];
+        echo $_SESSION['gummy_bears'];
+        echo $_SESSION['sourpatch'];
+        echo $_SESSION['chocolate_bar'];
         
     ?>
         </div>
