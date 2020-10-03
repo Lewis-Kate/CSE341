@@ -52,8 +52,8 @@ session_start();
         </form>
         
         <?php 
- if (isset($_POST['candy_input'])) { 
- $_SESSION['candy_input'] = $_POST['candy_input'];
+ if (isset($_POST['hard_candy'])) { 
+ $_SESSION['hard_candy'] = $_POST['hard_candy'];
  
  } 
         
