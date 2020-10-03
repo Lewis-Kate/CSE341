@@ -30,7 +30,8 @@ session_start();
   <div class="summary">    
         
    <?php
-        echo $_SESSION[“Submit”]       
+        echo $_SESSION[“Submit”]; 
+        print_r($_SESSION);
     ?>
         </div>
     
