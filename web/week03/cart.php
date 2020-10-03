@@ -19,8 +19,12 @@
     
     <div id="cart">
      <h2>Cart</h2>
+        
+        <p>Order Summary:</p>
+        
+        <?php
           echo $_SESSION[“Submit”]
-
+            ?>
     
              <button> <a href="checkout.html">Continue to Checkout</a>  </button>
     
