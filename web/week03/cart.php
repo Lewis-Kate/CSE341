@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+?>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -24,8 +29,7 @@
         
         <?php
           echo $_SESSION[“Submit”]
-              
-              print_r($_SESSION)
+
             ?>
     
              <button> <a href="checkout.html">Continue to Checkout</a>  </button>
