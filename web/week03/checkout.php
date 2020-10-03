@@ -33,7 +33,7 @@ session_start();
     <div id="checkout">
    
     <h3>Please Fill In All Fields</h3>
-<form  action="confirmation.php" method="post">
+<form  action="checkout.php" method="post">
   <input type="text" id="fname" name="fname" placeholder="First Name">
     
   <input type="text" id="lname" name="lname" placeholder="Last Name"><br>
