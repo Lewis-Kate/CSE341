@@ -27,11 +27,12 @@ session_start();
         
         <p>Order Summary:</p>
         
-        <?php
-          echo <div class=/"summary"/>;
-          echo $_SESSION[“Submit”]
-          echo </div>;
-        ?>
+  <div class="summary">    
+        
+   <?php
+        echo $_SESSION[“Submit”]       
+    ?>
+        </div>
     
              <button> <a href="checkout.html">Continue to Checkout</a>  </button>
     
