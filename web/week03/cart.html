@@ -9,36 +9,26 @@
 </head>
 <body>
     <nav>
-  <img src="images/logo.png" alt="candy logo" width="200">
-   <h1>The Sweet Shop</h1>
+<a href="index.html"><img src="images/logo.png" alt="candy logo" width="200"></a>
+        <a href="index.html"><h1>The Sweet Shop</h1></a>
          <a href="index.html">Continue Shopping</a>
   
     </nav>
 
 <main>
+    
     <div id="cart">
-    <h1>Cart</h1>
-    <h3>Please Fill In All Fields</h3>
-<form>
-  <input type="text" id="fname" name="fname" placeholder="First Name"><br>
-    
-  <input type="text" id="lname" name="lname" placeholder="Last Name"><br>
-    
-  <input type="text" id="stadd" name="stadd" placeholder="Street Address"><br>
+     <h2>Cart</h2>
+            <p>Hard Candy:</p><?php echo $_POST["hard_candy"]; ?><br>
+            <p>Chocolate:</p><?php echo $_POST["chocolate"]; ?><br>
+            <p>Gummy Bears:</p><?php echo $_POST["gummy_bears"]; ?><br>
+            <p>Sour Candies:</p><?php echo $_POST["sourpatch"]; ?><br>
+            <p>Chocolate Bar:</p><?php echo $_POST["chocolate_bar"]; ?><br>
 
- <input type="text" id="city" name="city" placeholder="City"><br>
     
- <input type="text" id="state" name="state" placeholder="State"><br>
+             <button> <a href="checkout.html">Continue to Checkout</a>  </button>
     
-    <input type="phone" id="phone" name="phone" placeholder="Phone Number"><br>
-    
-    <input type="email" id="email" name="email" placeholder="Email Address"><br>
-        </form>
-        
-         <button> <a href="#">Continue to Checkout</a>  </button>
-    </div>
-    
-
+</div>
   
    
     
