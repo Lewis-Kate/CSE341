@@ -29,7 +29,7 @@ session_start();
     <div id="candy">
     <h2> Sweets</h2>
    
-    <form action="" method="post">
+    <form action="index.php" method="post">
     <img src="images/hard_candy.png" alt="candy image" width="300">
     <input id="candy_input" name="hard_candy" placeholder="Enter Amount">
         
