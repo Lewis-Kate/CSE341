@@ -31,7 +31,7 @@ session_start();
         
    <?php
         echo $_SESSION[“Submit”]; 
-        print_r($_SESSION);
+        //print_r($_SESSION);
     ?>
         </div>
     
