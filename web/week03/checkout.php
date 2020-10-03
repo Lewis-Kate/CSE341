@@ -47,6 +47,8 @@ session_start();
     <input type="phone" id="phone" name="phone" placeholder="Phone Number"><br>
     
     <input type="email" id="email" name="email" placeholder="Email Address"><br>
+    
+    <button><a href="checkout.php">Click to Save Address</a></button>
         </form>
         
         <?php 
@@ -86,6 +88,7 @@ if (isset($_POST['email'])) {
     </div>
         
         <div class="center">
+                  
         
                   <button> <a href="confirmation.php">Submit Order</a>  </button>
         </div>

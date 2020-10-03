@@ -29,12 +29,12 @@ session_start();
     <div class="center">
     <h2>Order Confirmation</h2>
        
-        <p>Thanks for your order!</p>
+        <h3>Thanks for your order!</h3>
         <p>Hard Candy: <?php echo $_SESSION['hard_candy'];?></p>
-        <p>Chocolate:<?echo $_SESSION['chocolate'];?></p> 
-       <p>Gummy Bears:<? echo $_SESSION['gummy_bears'];?></p> 
+        <p>Chocolate: <?echo $_SESSION['chocolate'];?></p> 
+       <p>Gummy Bears: <? echo $_SESSION['gummy_bears'];?></p> 
         <p>Sour Candies: <? echo $_SESSION['sourpatch'];?></p>
-        <p>Chocolate Bars:<?echo $_SESSION['chocolate_bar'];?></p> 
+        <p>Chocolate Bars: <?echo $_SESSION['chocolate_bar'];?></p> 
         
     <h2>Shipping to:</h2>
          <p>First Name:<?php echo $_SESSION['fname'];?></p> 
