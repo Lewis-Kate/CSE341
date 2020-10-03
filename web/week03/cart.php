@@ -29,15 +29,14 @@ session_start();
         
   <div class="summary">    
         
-   <?php
-       <p>Hard Candy:</p> echo $_SESSION['hard_candy']; 
-        <p>Chocolate:</p> echo $_SESSION['chocolate'];
-       <p>Gummy Bears:</p>  echo $_SESSION['gummy_bears'];
-        <p>Sour Candies:</p> echo $_SESSION['sourpatch'];
-        <p>Chocolate Bars:</p> echo $_SESSION['chocolate_bar'];
+   
+       <p>Hard Candy:</p> <?php echo $_SESSION['hard_candy'];?>
+        <p>Chocolate:</p> <?echo $_SESSION['chocolate'];?>
+       <p>Gummy Bears:</p> <? echo $_SESSION['gummy_bears'];?>
+        <p>Sour Candies:</p> <? echo $_SESSION['sourpatch'];?>
+        <p>Chocolate Bars:</p> <?echo $_SESSION['chocolate_bar'];?>
         
-    ?>
-        </div>
+         </div>
     
              <button> <a href="checkout.html">Continue to Checkout</a>  </button>
     
