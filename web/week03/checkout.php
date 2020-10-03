@@ -33,7 +33,7 @@ session_start();
     <div id="checkout">
    
     <h3>Please Fill In All Fields</h3>
-<form>
+<form  action="confirmation.php" method="post">
   <input type="text" id="fname" name="fname" placeholder="First Name">
     
   <input type="text" id="lname" name="lname" placeholder="Last Name"><br>
@@ -47,8 +47,7 @@ session_start();
     <input type="phone" id="phone" name="phone" placeholder="Phone Number"><br>
     
     <input type="email" id="email" name="email" placeholder="Email Address"><br>
-    
-    <button><a href="checkout.php">Click to Save Address</a></button>
+  
         </form>
         
         <?php 
