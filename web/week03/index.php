@@ -53,9 +53,24 @@ session_start();
         
         <?php 
  if (isset($_POST['hard_candy'])) { 
- $_SESSION['hard_candy'] = $_POST['hard_candy'];
- 
+ $_SESSION['hard_candy'] = $_POST['hard_candy']; 
  } 
+
+ if (isset($_POST['chocolate'])) { 
+ $_SESSION['chocolate'] = $_POST['chocolate']; 
+ } 
+        
+if (isset($_POST['gummy_bears'])) { 
+ $_SESSION['gummy_bears'] = $_POST['gummy_bears']; 
+ } 
+        
+if (isset($_POST['sourpatch'])) { 
+ $_SESSION['sourpatch'] = $_POST['sourpatch']; 
+ }
+        
+if (isset($_POST['chocolate_bar'])) { 
+ $_SESSION['chocolate_bar'] = $_POST['chocolate_bar']; 
+ }
         
          print_r($_SESSION)
 ?> 
