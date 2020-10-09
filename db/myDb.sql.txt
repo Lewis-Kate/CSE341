@@ -1,0 +1,23 @@
+create database menuPlanner;
+
+CREATE TABLE days(
+daysId int primary key not null,
+monday varchar(100) not null,
+tuesday varchar(100) not null,
+wednesday varchar(100) not null,
+thursday varchar(100) not null,
+friday varchar(100) not null,
+saturday varchar(100) not null,
+sunday varchar(100) not null
+);
+
+CREATE TABLE shoppingList(
+shoppingListId int primary key not null,
+item varchar(100) not null
+);
+
+CREATE TABLE meal (
+mealId int primary key not null,
+shoppingListId int references shoppingList(shoppingListId),
+daysId int references days(daysId)
+);
