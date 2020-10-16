@@ -14,7 +14,7 @@
     <main>
     
     <div class="view">    
-    <h1>Meals</h1>
+    <h1>View Menu</h1>
         <button><a href="index.php">Home</a></button>
         <button><a href="meals.php">Plan Meals</a></button>
         <button><a href="shop.php">Shopping List</a></button>
