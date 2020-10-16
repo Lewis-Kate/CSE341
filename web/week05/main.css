@@ -1,0 +1,29 @@
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+
+.home, .meals, .shop, .view{
+    display: flex;
+    flex-flow: column nowrap; 
+    justify-content: center;
+    align-items: center;
+}
+
+.home h1, .meals h1, .shop h1, .view h1{
+   font-family: 'Rozha One', serif; 
+   font-size: 4em;
+ }
+
+.home button, .meals button, .shop button, .view button{
+    margin: 1em;
+    font-family: 'Barlow', sans-serif;
+    width: 10em;
+    height: 2.5em;
+    text-align: center;
+}
+
+.home a, .meals a, .shop a, .view a {
+    text-decoration: none;
+    color: black;
+}
