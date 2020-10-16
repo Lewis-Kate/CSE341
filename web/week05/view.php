@@ -16,8 +16,8 @@
     <div class="view">    
     <h1>Meals</h1>
         <button><a href="index.php">Home</a></button>
-        <button><a href="index.php">Plan Meals</a></button>
-        <button><a href="index.php">Shopping List</a></button>
+        <button><a href="meals.php">Plan Meals</a></button>
+        <button><a href="shop.php">Shopping List</a></button>
     </div>
     
     </main>
