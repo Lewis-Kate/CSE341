@@ -20,11 +20,42 @@ $db = get_db();
     <main>
     
     <div class="view">    
-    <h1>View Menu</h1>
+    <h1>View Your Menu</h1>
         <button><a href="index.php">Home</a></button>
         <button><a href="meals.php">Plan Meals</a></button>
         <button><a href="shop.php">Shopping List</a></button>
     </div>
+        
+        <div class ="current">
+        
+        <h2>Current Menu:</h2>
+            <?php 
+   
+          
+foreach ($db->query('SELECT * FROM days') as $row)
+    {
+       echo 'Monday: ' . $row['monday'] . '<br>';
+       echo 'Tuesday: ' . $row['tuesday'] . '<br>'; 
+       echo 'Wednesday: ' . $row['wednesday'] .'<br>';
+       echo 'Thursday: ' . $row['thursday'] . '<br>';
+       echo 'Friday: ' . $row['friday'] . '<br>';
+       echo 'Saturday: ' . $row['saturday'] . '<br>';
+       echo 'Sunday: ' . $row['sunday'] . '<br>';
+}
+?>
+            
+        <h2>Current List:</h2>
+            
+             <?php 
+   
+          
+foreach ($db->query('SELECT * FROM shoppingList') as $row)
+    {
+       echo 'Shopping List: ' . $row['item'] . '<br>';
+    }
+?>
+        
+        </div>
     
     </main>
 </div> 

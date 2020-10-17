@@ -29,7 +29,7 @@
 }
 
 .meal_form, .shop_form {
-     display: flex;
+    display: flex;
     flex-flow: column nowrap; 
     justify-content: center;
     align-items: center;
@@ -58,5 +58,9 @@
     height: 20em;
   }
 
+.current{
+   border: 2px solid black;
+   margin: 3em; 
+}
 
 
