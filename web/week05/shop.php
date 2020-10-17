@@ -31,8 +31,7 @@ $db = get_db();
         <h2>Make Your List</h2>
             
             <form action="shop.php"  method="post">
-            <label for ="shoplist">Shopping List:</label>
-            <textarea id="shoplist" name="textarea" placeholder="Enter list here"></textarea>
+            <textarea id="shoplist" name="textarea" placeholder="Shopping List"></textarea><br>
             <input type="submit" value="Save">            
             </form>
         

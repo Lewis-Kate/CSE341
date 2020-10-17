@@ -1,5 +1,5 @@
 .content {
-  max-width: 500px;
+  max-width: 900px;
   margin: auto;
 }
 
@@ -36,7 +36,7 @@
     font-family: 'Barlow', sans-serif; 
     border: 2px solid black;
     margin: 3em;
-}
+ }
 
 .meal_form h2, .shop_form h2{
    font-family: 'Rozha One', serif; 
@@ -46,13 +46,16 @@
     padding: .5em;
     margin: 1em;
     text-align: center;
-    width: 20em;
+    width: 15em;
 }
+
 
 .shop_form textarea{
     overflow: auto;
     resize: none;
     font-family: 'Barlow', sans-serif;
+    width: 30em;
+    height: 20em;
   }
 
 
