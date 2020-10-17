@@ -27,15 +27,15 @@ session_start();
     <div class="meal_form" >
        <h2>Complete the Form</h2> 
       <form action="meals.php"  method="post">
-          <input type="text" id="mon" name="mon" value="mon" placeholder="Monday"><br>
-          <input type="text" id="tues" name="tues" value="tues" placeholder="Tuesday"><br>
-          <input type="text" id="wed" name="wed" value="wed" placeholder="Wednesday"><br>
-          <input type="text" id="thurs" name="thurs" value="thurs" placeholder="Thursday"><br>
-          <input type="text" id="fri" name="fri" value="fri" placeholder="Friday"><br>
-          <input type="text" id="sat" name="sat" value="sat" placeholder="Saturday"><br>
-          <input type="text" id="sun" name="sun" value="sun" placeholder="Sunday"><br>
-          <input type="submit" value="Save">        
-      </form>  
+      <input type="text" id="mon" name="mon" placeholder="Monday"><br>
+          <input type="text" id="tues" name="tues" placeholder="Tuesday"><br>
+          <input type="text" id="wed" name="wed"  placeholder="Wednesday"><br>
+          <input type="text" id="thurs" name="thurs" placeholder="Thursday"><br>
+          <input type="text" id="fri" name="fri" placeholder="Friday"><br>
+          <input type="text" id="sat" name="sat"  placeholder="Saturday"><br>
+          <input type="text" id="sun" name="sun"  placeholder="Sunday"><br>
+          <input type="submit" value="Save">  
+    </form>  
         
         <?php 
  
@@ -64,13 +64,13 @@ try
           
 foreach ($db->query('SELECT * FROM days') as $row)
     {
-       echo 'Monday: ' . $row['monday'];
-       echo 'Tuesday: ' . $row['tuesday']; 
-       echo 'Wednesday: ' . $row['wednesday'];
-       echo 'Thursday: ' . $row['thursday'];
-       echo 'Friday: ' . $row['friday'];
-       echo 'Saturday: ' . $row['saturday'];
-       echo 'Sunday: ' . $row['sunday'];
+       echo 'Monday: ' . $row['monday']<br>;
+       echo 'Tuesday: ' . $row['tuesday']<br>; 
+       echo 'Wednesday: ' . $row['wednesday']<br>;
+       echo 'Thursday: ' . $row['thursday']<br>;
+       echo 'Friday: ' . $row['friday']<br>;
+       echo 'Saturday: ' . $row['saturday']<br>;
+       echo 'Sunday: ' . $row['sunday']<br>;
 }
 
 ?>

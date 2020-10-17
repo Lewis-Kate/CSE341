@@ -27,3 +27,26 @@
     text-decoration: none;
     color: black;
 }
+
+.meal_form {
+     display: flex;
+    flex-flow: column nowrap; 
+    justify-content: center;
+    align-items: center;
+    font-family: 'Barlow', sans-serif; 
+    border: 2px solid black;
+    margin: 3em;
+}
+
+.meal_form h2{
+   font-family: 'Rozha One', serif; 
+}
+
+.meal_form input{
+    padding: .5em;
+    margin: 1em;
+    text-align: center;
+    width: 20em;
+}
+
+
