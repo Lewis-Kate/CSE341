@@ -1,5 +1,7 @@
 <?php
 session_start();
+require "dbconnect.php";
+$db = get_db();
 ?>
 
 <!DOCTYPE html>

@@ -28,7 +28,7 @@
     color: black;
 }
 
-.meal_form {
+.meal_form, .shop_form {
      display: flex;
     flex-flow: column nowrap; 
     justify-content: center;
@@ -38,16 +38,22 @@
     margin: 3em;
 }
 
-.meal_form h2{
+.meal_form h2, .shop_form h2{
    font-family: 'Rozha One', serif; 
 }
 
-.meal_form input{
+.meal_form input, .shop_form input{
     padding: .5em;
     margin: 1em;
     text-align: center;
     width: 20em;
-   
 }
+
+.shop_form textarea{
+    overflow: auto;
+    width: 600px;
+	height: 120px;
+}
+
 
 

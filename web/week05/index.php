@@ -1,7 +1,9 @@
-
 <?php
 session_start();
+require "dbconnect.php";
+$db = get_db();
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -12,6 +14,11 @@ session_start();
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Rozha+One&display=swap" rel="stylesheet">
 </head>
+<?php
+session_start();
+require "dbconnect.php";
+$db = get_db();
+?>
 
     
 <body>
@@ -27,30 +34,7 @@ session_start();
     
     </main>
 </div> 
-    
-    <?php
-    try
-    {
-      $dbUrl = getenv('DATABASE_URL');
-    
-      $dbOpts = parse_url($dbUrl);
-    
-      $dbHost = $dbOpts["host"];
-      $dbPort = $dbOpts["port"];
-      $dbUser = $dbOpts["user"];
-      $dbPassword = $dbOpts["pass"];
-      $dbName = ltrim($dbOpts["path"],'/');
-    
-      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-    
-      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-    catch (PDOException $ex)
-    {
-      echo 'Error!: ' . $ex->getMessage();
-      die();
-    }
-    ?>
+
 </body>
 
 </html>

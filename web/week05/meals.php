@@ -28,22 +28,22 @@ $db = get_db();
     </div>
         
     <div class="meal_form" >
-       <h2>Complete the Form</h2> 
+       <h2>What's for Dinner?</h2> 
       <form action="meals.php"  method="post">
         <label for="mon">Monday:</label>
-          <input type="text" id="mon" name="mon" value="mon"><br>
+          <input type="text" id="mon" name="mon"><br>
           <label for="tues">Tuesday:</label>
-          <input type="text" id="tues" name="tues" value="tues" ><br>
+          <input type="text" id="tues" name="tues"><br>
           <label for="wed">Wednesday:</label>
-          <input type="text" id="wed" name="wed" value="wed" ><br>
+          <input type="text" id="wed" name="wed" ><br>
           <label for="thurs">Thursday:</label>
-          <input type="text" id="thurs" name="thurs" value="thurs" br>
+          <input type="text" id="thurs" name="thurs"><br>
           <label for="fri">Friday:</label>
-          <input type="text" id="fri" name="fri" value="fri"><br>
+          <input type="text" id="fri" name="fri"><br>
           <label for="sat">Saturday:</label>
-          <input type="text" id="sat" name="sat" value="sat" ><br>
+          <input type="text" id="sat" name="sat" ><br>
           <label for="sun">Sunday:</label>
-          <input type="text" id="sun" name="sun" value="sun" ><br>
+          <input type="text" id="sun" name="sun"><br>
           <input type="submit" value="Save">        
       </form>  
         
@@ -52,7 +52,7 @@ $db = get_db();
           
 foreach ($db->query('SELECT * FROM days') as $row)
     {
-      echo 'Monday: ' . $row['monday'] . '<br>';
+       echo 'Monday: ' . $row['monday'] . '<br>';
        echo 'Tuesday: ' . $row['tuesday'] . '<br>'; 
        echo 'Wednesday: ' . $row['wednesday'] .'<br>';
        echo 'Thursday: ' . $row['thursday'] . '<br>';

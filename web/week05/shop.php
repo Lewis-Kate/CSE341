@@ -1,5 +1,7 @@
 <?php
 session_start();
+require "dbconnect.php";
+$db = get_db();
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +25,26 @@ session_start();
         <button><a href="meals.php">Plan Meals</a></button>
         <button><a href="view.php">View Menu</a></button>
     </div>
+        
+        <div class="shop_form">
+
+        <h2>Make Your List</h2>
+            
+            <form action="shop.php"  method="post">
+            <label for ="shoplist">Shopping List:</label>
+            <textarea id="shoplist" name="textarea" placeholder="Enter list here"></textarea>
+            <input type="submit" value="Save">            
+            </form>
+        
+             <?php 
+   
+          
+foreach ($db->query('SELECT * FROM shoppingList') as $row)
+    {
+       echo 'Shopping List: ' . $row['item'] . '<br>';
+    }
+?>
+        </div>
     
     </main>
 </div> 
