@@ -71,6 +71,7 @@ foreach ($db->query('SELECT * FROM days') as $row)
        echo 'Friday: ' . $row['friday'];
        echo 'Saturday: ' . $row['saturday'];
        echo 'Sunday: ' . $row['sunday'];
+}
 
 ?>
 
