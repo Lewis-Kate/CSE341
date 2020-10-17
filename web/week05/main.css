@@ -51,9 +51,9 @@
 
 .shop_form textarea{
     overflow: auto;
-    width: 600px;
-	height: 120px;
-}
+    resize: none;
+    font-family: 'Barlow', sans-serif;
+  }
 
 
 
