@@ -27,20 +27,20 @@ session_start();
     <div class="meal_form" >
        <h2>Complete the Form</h2> 
       <form action="meals.php"  method="post">
-          <label for="mon">Monday:</label>
-          <input type="text" id="mon" name="mon" placeholder="Monday"><br>
+                  <label for="mon">Monday:</label>
+          <input type="text" id="mon" name="mon" value="mon"><br>
           <label for="tues">Tuesday:</label>
-          <input type="text" id="tues" name="tues" placeholder="Tuesday"><br>
+          <input type="text" id="tues" name="tues" value="tues" ><br>
           <label for="wed">Wednesday:</label>
-          <input type="text" id="wed" name="wed"  placeholder="Wednesday"><br>
+          <input type="text" id="wed" name="wed" value="wed" ><br>
           <label for="thurs">Thursday:</label>
-          <input type="text" id="thurs" name="thurs" placeholder="Thursday"><br>
+          <input type="text" id="thurs" name="thurs" value="thurs" br>
           <label for="fri">Friday:</label>
-          <input type="text" id="fri" name="fri" placeholder="Friday"><br>
+          <input type="text" id="fri" name="fri" value="fri"><br>
           <label for="sat">Saturday:</label>
-          <input type="text" id="sat" name="sat"  placeholder="Saturday"><br>
+          <input type="text" id="sat" name="sat" value="sat" ><br>
           <label for="sun">Sunday:</label>
-          <input type="text" id="sun" name="sun"  placeholder="Sunday"><br>
+          <input type="text" id="sun" name="sun" value="sun" ><br>
           <input type="submit" value="Save">        
       </form>  
         
