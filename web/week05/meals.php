@@ -27,7 +27,7 @@ session_start();
     <div class="meal_form" >
        <h2>Complete the Form</h2> 
       <form action="meals.php"  method="post">
-                  <label for="mon">Monday:</label>
+        <label for="mon">Monday:</label>
           <input type="text" id="mon" name="mon" value="mon"><br>
           <label for="tues">Tuesday:</label>
           <input type="text" id="tues" name="tues" value="tues" ><br>
