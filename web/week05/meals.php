@@ -38,34 +38,7 @@ session_start();
       </form>  
         
         <?php 
-/* if (isset($_POST['mon'])) { 
- $_SESSION['mon'] = $_POST['mon']; 
- } 
-
- if (isset($_POST['tues'])) { 
- $_SESSION['tues'] = $_POST['tues']; 
- } 
-        
- if (isset($_POST['wed'])) { 
- $_SESSION['wed'] = $_POST['wed']; 
- } 
-        
- if (isset($_POST['thurs'])) { 
- $_SESSION['thurs'] = $_POST['thurs']; 
- }
-        
-if (isset($_POST['fri'])) { 
- $_SESSION['fri'] = $_POST['fri']; 
- } 
-        
-if (isset($_POST['sat'])) { 
- $_SESSION['sat'] = $_POST['sat']; 
- }
-        
-if (isset($_POST['sun'])) { 
- $_SESSION['sun'] = $_POST['sun']; 
- } */
-     
+ 
 try
     {
       $dbUrl = getenv('DATABASE_URL');
@@ -88,23 +61,19 @@ try
       die();
     }
         
-    $id = filter_input(INPUT_GET, 'action');
-    $stmt = $db->query('SELECT * FROM days WHERE id = :id');
-    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
-    $stmt->execute();
-    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        
+          
 foreach ($db->query('SELECT * FROM days') as $row)
     {
-        echo . $row['monday'] . <br> . $row['tuesday'] . <br> . $row['wednesday'] . <br> . $row['thursday'] . <br> . $row['friday'] . <br> . $row['saturday'] . <br> . $row['sunday'] };
-
-        
-         print_r($_SESSION)
+       echo 'Monday: ' . $row['monday'];
+       echo 'Tuesday: ' . $row['tuesday']; 
+       echo 'Wednesday: ' . $row['wednesday'];
+       echo 'Thursday: ' . $row['thursday'];
+       echo 'Friday: ' . $row['friday'];
+       echo 'Saturday: ' . $row['saturday'];
+       echo 'Sunday: ' . $row['sunday'];
 
 ?>
 
-
-    
     </div>    
     
     </main>
