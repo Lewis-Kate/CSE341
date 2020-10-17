@@ -27,13 +27,20 @@ session_start();
     <div class="meal_form" >
        <h2>Complete the Form</h2> 
       <form action="meals.php"  method="post">
-          <input type="text" id="mon" name="mon" value="mon"><br>
-          <input type="text" id="tues" name="tues" value="tues"><br>
-          <input type="text" id="wed" name="wed" value="wed"><br>
-          <input type="text" id="thurs" name="thurs" value="thurs"><br>
-          <input type="text" id="fri" name="fri" value="fri"><br>
-          <input type="text" id="sat" name="sat" value="sat"><br>
-          <input type="text" id="sun" name="sun" value="sun"><br>
+          <label for="mon">Monday:</label>
+          <input type="text" id="mon" name="mon" placeholder="Monday"><br>
+          <label for="tues">Tuesday:</label>
+          <input type="text" id="tues" name="tues" placeholder="Tuesday"><br>
+          <label for="wed">Wednesday:</label>
+          <input type="text" id="wed" name="wed"  placeholder="Wednesday"><br>
+          <label for="thurs">Thursday:</label>
+          <input type="text" id="thurs" name="thurs" placeholder="Thursday"><br>
+          <label for="fri">Friday:</label>
+          <input type="text" id="fri" name="fri" placeholder="Friday"><br>
+          <label for="sat">Saturday:</label>
+          <input type="text" id="sat" name="sat"  placeholder="Saturday"><br>
+          <label for="sun">Sunday:</label>
+          <input type="text" id="sun" name="sun"  placeholder="Sunday"><br>
           <input type="submit" value="Save">        
       </form>  
         
@@ -64,7 +71,7 @@ try
           
 foreach ($db->query('SELECT * FROM days') as $row)
     {
-       echo 'Monday: ' . $row['monday']<br>;
+             echo 'Monday: ' . $row['monday']<br>;
        echo 'Tuesday: ' . $row['tuesday']<br>; 
        echo 'Wednesday: ' . $row['wednesday']<br>;
        echo 'Thursday: ' . $row['thursday']<br>;
@@ -72,7 +79,6 @@ foreach ($db->query('SELECT * FROM days') as $row)
        echo 'Saturday: ' . $row['saturday']<br>;
        echo 'Sunday: ' . $row['sunday']<br>;
 }
-
 ?>
 
     </div>    
