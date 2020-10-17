@@ -24,9 +24,9 @@ session_start();
         <button><a href="view.php">View Menu</a></button>
     </div>
         
-    <div class="meal_form"  method="post">
+    <div class="meal_form" >
        <h2>Complete the Form</h2> 
-      <form action="meals.php">
+      <form action="meals.php"  method="post">
           <input type="text" id="mon" name="mon" value="mon" placeholder="Monday"><br>
           <input type="text" id="tues" name="tues" value="tues" placeholder="Tuesday"><br>
           <input type="text" id="wed" name="wed" value="wed" placeholder="Wednesday"><br>
