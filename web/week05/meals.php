@@ -50,14 +50,14 @@ $db = get_db();
           
 $days = $db->query('SELECT * FROM days');
         
-$stmt = $db->prepare('INSERT INTO days (monday, tuesday, wednesday, thursday, friday, saturday, sunday) VALUES (:id, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)');
-$stmt->bindValue(':monday', $_POST['monday'], PDO::PARAM_STR);
-$stmt->bindValue(':tuesday', $_POST['tuesday'], PDO::PARAM_STR);
-$stmt->bindValue(':wednesday', $_POST['wednesday'], PDO::PARAM_STR);
-$stmt->bindValue(':thursday', $_POST['thursday'], PDO::PARAM_STR);
-$stmt->bindValue(':friday', $_POST['friday'], PDO::PARAM_STR);
-$stmt->bindValue(':saturday', $_POST['saturday'], PDO::PARAM_STR);
-$stmt->bindValue(':sunday', $_POST['sunday'], PDO::PARAM_STR);
+$stmt = $db->prepare('INSERT INTO days (monday, tuesday, wednesday, thursday, friday, saturday, sunday) VALUES (:monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)');
+$stmt->bindValue(':monday', $_POST['mon'], PDO::PARAM_STR);
+$stmt->bindValue(':tuesday', $_POST['tues'], PDO::PARAM_STR);
+$stmt->bindValue(':wednesday', $_POST['wed'], PDO::PARAM_STR);
+$stmt->bindValue(':thursday', $_POST['thurs'], PDO::PARAM_STR);
+$stmt->bindValue(':friday', $_POST['fri'], PDO::PARAM_STR);
+$stmt->bindValue(':saturday', $_POST['sat'], PDO::PARAM_STR);
+$stmt->bindValue(':sunday', $_POST['sun'], PDO::PARAM_STR);
 $stmt->execute();
 
     ?>
