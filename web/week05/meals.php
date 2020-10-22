@@ -70,6 +70,7 @@ foreach ($db->query('SELECT * FROM days') as $row)
        echo 'Friday: ' . $row['friday'] . '<br>';
        echo 'Saturday: ' . $row['saturday'] . '<br>';
        echo 'Sunday: ' . $row['sunday'] . '<br>';
+}
     ?>
            </form> 
 
