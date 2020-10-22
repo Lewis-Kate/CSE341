@@ -50,16 +50,15 @@ $db = get_db();
         <?php 
         
     $stmt = $db->prepare('INSERT INTO days (id, monday, tuesday, wednesday, thursday, friday, saturday, sunday) VALUES (:id, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)');
-    $stmt->bindValue(':monday', $book, PDO::PARAM_STR);
-    $stmt->bindValue(':tuesday', $chapter, PDO::PARAM_STR);
-    $stmt->bindValue(':wednesday', $verse, PDO::PARAM_STR);
-    $stmt->bindValue(':thursday', $content, PDO::PARAM_STR);
-    $stmt->bindValue(':friday', $content, PDO::PARAM_STR);
-    $stmt->bindValue(':saturday', $content, PDO::PARAM_STR);
-    $stmt->bindValue(':sunday', $content, PDO::PARAM_STR);
+    $stmt->bindValue(':monday', $monday, PDO::PARAM_STR);
+    $stmt->bindValue(':tuesday', $tuesday, PDO::PARAM_STR);
+    $stmt->bindValue(':wednesday', $wednesday, PDO::PARAM_STR);
+    $stmt->bindValue(':thursday', $thursday, PDO::PARAM_STR);
+    $stmt->bindValue(':friday', $friday, PDO::PARAM_STR);
+    $stmt->bindValue(':saturday', $saturday, PDO::PARAM_STR);
+    $stmt->bindValue(':sunday', $sunday, PDO::PARAM_STR);
     $stmt->execute();
 
-    $daysId = $db->lastInsertId("days_id_seq");
    
           
 foreach ($db->query('SELECT * FROM days') as $row)
