@@ -45,7 +45,7 @@ $db = get_db();
           <label for="sun">Sunday:</label>
           <input type="text" id="sun" name="sun"><br>
           <input type="submit" value="Save">        
-      </form>  
+      
 <?php
         
  $stmt = $db->prepare('INSERT INTO days (monday, tuesday, wednesday, thursday, friday, saturday, sunday) VALUES (:monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)');
@@ -71,6 +71,7 @@ foreach ($db->query('SELECT * FROM days') as $row)
        echo 'Saturday: ' . $row['saturday'] . '<br>';
        echo 'Sunday: ' . $row['sunday'] . '<br>';
     ?>
+           </form> 
 
     </div>    
     
