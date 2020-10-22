@@ -27,11 +27,13 @@ body{
     width: 10em;
     height: 2.5em;
     text-align: center;
+    background-color: #443266; 
+    border: 2px solid #F1F0FF;
 }
 
 .home a, .meals a, .shop a, .view a {
     text-decoration: none;
-    color: black;
+    color: #F1F0FF;
 }
 
 .meal_form, .shop_form {
