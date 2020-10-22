@@ -32,7 +32,7 @@ $db = get_db();
             
             <form action="shop.php"  method="post">
             <textarea id="shoplist" name="textarea" placeholder="Shopping List"></textarea><br>
-            <input type="submit" value="Save">            
+            <input id="submit" type="submit" value="Save">            
             </form>
         
              <?php 

@@ -44,7 +44,7 @@ $db = get_db();
           <input type="text" id="sat" name="sat" ><br>
           <label for="sun">Sunday:</label>
           <input type="text" id="sun" name="sun"><br>
-          <input type="submit" value="Save">   
+          <input id="submit" type="submit" value="Save">   
           </form> 
       
 <?php

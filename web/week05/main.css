@@ -60,6 +60,17 @@ body{
     width: 15em;
 }
 
+#submit{
+     margin: 1em;
+    font-family: 'Barlow', sans-serif;
+    width: 10em;
+    height: 2.5em;
+    text-align: center;
+    background-color: #443266; 
+    border: 2px solid #F1F0FF;
+    border-radius: 10px;
+}
+
 
 .shop_form textarea{
     overflow: auto;
