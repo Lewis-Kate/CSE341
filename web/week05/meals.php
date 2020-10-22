@@ -47,6 +47,8 @@ $db = get_db();
           <input type="submit" value="Save">        
       
 <?php
+          
+$days = $db->query('SELECT * FROM days');
         
  $stmt = $db->prepare('INSERT INTO days (monday, tuesday, wednesday, thursday, friday, saturday, sunday) VALUES (:monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)');
 $stmt->bindValue(':monday', $monday);
