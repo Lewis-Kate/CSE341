@@ -2,6 +2,17 @@
 session_start();
 require "dbconnect.php";
 $db = get_db();
+
+$stmt = $db->prepare('INSERT INTO days (id, monday, tuesday, wednesday, thursday, friday, saturday, sunday) VALUES (:id, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)');
+    $stmt->bindValue(':monday', $monday, PDO::PARAM_STR);
+    $stmt->bindValue(':tuesday', $tuesday, PDO::PARAM_STR);
+    $stmt->bindValue(':wednesday', $wednesday, PDO::PARAM_STR);
+    $stmt->bindValue(':thursday', $thursday, PDO::PARAM_STR);
+    $stmt->bindValue(':friday', $friday, PDO::PARAM_STR);
+    $stmt->bindValue(':saturday', $saturday, PDO::PARAM_STR);
+    $stmt->bindValue(':sunday', $sunday, PDO::PARAM_STR);
+    $stmt->execute();
+
 ?>
 
 
@@ -46,21 +57,8 @@ $db = get_db();
           <input type="text" id="sun" name="sun"><br>
           <input type="submit" value="Save">        
       </form>  
-        
-        <?php 
-        
-    $stmt = $db->prepare('INSERT INTO days (id, monday, tuesday, wednesday, thursday, friday, saturday, sunday) VALUES (:id, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)');
-    $stmt->bindValue(':monday', $monday, PDO::PARAM_STR);
-    $stmt->bindValue(':tuesday', $tuesday, PDO::PARAM_STR);
-    $stmt->bindValue(':wednesday', $wednesday, PDO::PARAM_STR);
-    $stmt->bindValue(':thursday', $thursday, PDO::PARAM_STR);
-    $stmt->bindValue(':friday', $friday, PDO::PARAM_STR);
-    $stmt->bindValue(':saturday', $saturday, PDO::PARAM_STR);
-    $stmt->bindValue(':sunday', $sunday, PDO::PARAM_STR);
-    $stmt->execute();
-
-   
-          
+<?php
+                  
 foreach ($db->query('SELECT * FROM days') as $row)
     {
        echo 'Monday: ' . $row['monday'] . '<br>';
@@ -70,8 +68,7 @@ foreach ($db->query('SELECT * FROM days') as $row)
        echo 'Friday: ' . $row['friday'] . '<br>';
        echo 'Saturday: ' . $row['saturday'] . '<br>';
        echo 'Sunday: ' . $row['sunday'] . '<br>';
-}
-?>
+    ?>
 
     </div>    
     
