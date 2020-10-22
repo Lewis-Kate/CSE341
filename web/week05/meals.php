@@ -50,28 +50,16 @@ $db = get_db();
           
 $days = $db->query('SELECT * FROM days');
         
- $stmt = $db->prepare('INSERT INTO days (monday, tuesday, wednesday, thursday, friday, saturday, sunday) VALUES (:monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)');
-$stmt->bindValue(':monday', $monday);
-$stmt->bindValue(':tuesday', $tuesday);
-$stmt->bindValue(':wednesday', $wednesday);
-$stmt->bindValue(':thursday', $thursday);
-$stmt->bindValue(':friday', $friday);
-$stmt->bindValue(':saturday', $saturday);
-$stmt->bindValue(':sunday', $sunday);
+$stmt = $db->prepare('INSERT INTO days (monday, tuesday, wednesday, thursday, friday, saturday, sunday) VALUES (:id, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)');
+$stmt->bindValue(':monday', $_POST['monday'], PDO::PARAM_STR);
+$stmt->bindValue(':tuesday', $_POST['tuesday'], PDO::PARAM_STR);
+$stmt->bindValue(':wednesday', $_POST['wednesday'], PDO::PARAM_STR);
+$stmt->bindValue(':thursday', $_POST['thursday'], PDO::PARAM_STR);
+$stmt->bindValue(':friday', $_POST['friday'], PDO::PARAM_STR);
+$stmt->bindValue(':saturday', $_POST['saturday'], PDO::PARAM_STR);
+$stmt->bindValue(':sunday', $_POST['sunday'], PDO::PARAM_STR);
 $stmt->execute();
 
-$daysId = $db->lastInsertId("days_id_seq");
-        
-                  
-foreach ($db->query('SELECT * FROM days') as $row)
-    {
-       echo 'Monday: ' . $row['monday'] . '<br>';
-       echo 'Tuesday: ' . $row['tuesday'] . '<br>'; 
-       echo 'Wednesday: ' . $row['wednesday'] .'<br>';
-       echo 'Thursday: ' . $row['thursday'] . '<br>';
-       echo 'Friday: ' . $row['friday'] . '<br>';
-       echo 'Saturday: ' . $row['saturday'] . '<br>';
-       echo 'Sunday: ' . $row['sunday'] . '<br>';
 }
     ?>
            </form> 
