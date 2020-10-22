@@ -48,7 +48,7 @@ body{
     margin: 3em;
  }
 
-.meal_form h2, .shop_form h2{
+.meal_form h2, .shop_form h2, .current h2{
    font-family: 'Rozha One', serif;
     color: #443266;
 }
