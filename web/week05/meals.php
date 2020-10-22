@@ -48,7 +48,18 @@ $db = get_db();
       </form>  
 <?php
         
-$query = "NSERT INTO days (monday, tuesday, wednesday, thursday, friday, saturday, sunday VALUES '$_POST[monday]', '$_POST[tuesday]', '$_POST[wednesday]', '$_POST[thursday]', '$_POST[friday]', '$_POST[saturday]', '$_POST[sunday]')";
+ $stmt = $db->prepare('INSERT INTO days (monday, tuesday, wednesday, thursday, friday, saturday, sunday) VALUES (:monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)');
+$stmt->bindValue(':monday', $monday);
+$stmt->bindValue(':tuesday', $tuesday);
+$stmt->bindValue(':wednesday', $wednesday);
+$stmt->bindValue(':thursday', $thursday);
+$stmt->bindValue(':friday', $friday);
+$stmt->bindValue(':saturday', $saturday);
+$stmt->bindValue(':sunday', $sunday);
+$stmt->execute();
+
+$daysId = $db->lastInsertId("days_id_seq");
+        
                   
 foreach ($db->query('SELECT * FROM days') as $row)
     {
