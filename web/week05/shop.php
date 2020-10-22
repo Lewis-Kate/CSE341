@@ -36,12 +36,12 @@ $db = get_db();
             </form>
         
              <?php 
-   
-          
-foreach ($db->query('SELECT * FROM shoppingList') as $row)
-    {
-       echo 'Shopping List: ' . $row['item'] . '<br>';
-    }
+            
+$shoppingList = $db->query('SELECT * FROM shoppingList');
+        
+$stmt = $db->prepare('INSERT INTO shoppingList (item) VALUES (:item)');
+$stmt->bindValue(':item', $_POST['textarea'], PDO::PARAM_STR);
+ 
 ?>
         </div>
     

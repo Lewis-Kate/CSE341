@@ -1,7 +1,12 @@
 create database menuPlanner;
 
+DROP TABLE IF EXISTS meal;
+DROP TABLE IF EXISTS days;
+DROP TABLE IF EXISTS shoppingList;
+
+
 CREATE TABLE days(
-daysId int primary key not null,
+daysId SERIAL primary key not null,
 monday varchar(100) not null,
 tuesday varchar(100) not null,
 wednesday varchar(100) not null,
@@ -12,12 +17,18 @@ sunday varchar(100) not null
 );
 
 CREATE TABLE shoppingList(
-shoppingListId int primary key not null,
+shoppingListId SERIAL primary key not null,
 item varchar(100) not null
 );
 
 CREATE TABLE meal (
-mealId int primary key not null,
+mealId SERIAL primary key not null,
 shoppingListId int references shoppingList(shoppingListId),
 daysId int references days(daysId)
 );
+
+
+INSERT INTO days (daysId, monday, tuesday, wednesday, thursday, friday, saturday, sunday)
+Values (DEFAULT, 'chili', 'pizza', 'chicken', 'salad', 'hamburgers', 'fish', 'lasagna');
+
+INSERT INTO shoppingList (shoppingListId, item) VALUES (DEFAULT, 'chicken, noodles, cheeses, buns, lettuce, salad dressing, cucumbers, beans');
