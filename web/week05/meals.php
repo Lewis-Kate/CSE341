@@ -60,7 +60,6 @@ $stmt->bindValue(':saturday', $_POST['saturday'], PDO::PARAM_STR);
 $stmt->bindValue(':sunday', $_POST['sunday'], PDO::PARAM_STR);
 $stmt->execute();
 
-}
     ?>
            </form> 
 
