@@ -2,17 +2,6 @@
 session_start();
 require "dbconnect.php";
 $db = get_db();
-
-$stmt = $db->prepare('INSERT INTO days (id, monday, tuesday, wednesday, thursday, friday, saturday, sunday) VALUES (:id, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)');
-    $stmt->bindValue(':monday', $monday, PDO::PARAM_STR);
-    $stmt->bindValue(':tuesday', $tuesday, PDO::PARAM_STR);
-    $stmt->bindValue(':wednesday', $wednesday, PDO::PARAM_STR);
-    $stmt->bindValue(':thursday', $thursday, PDO::PARAM_STR);
-    $stmt->bindValue(':friday', $friday, PDO::PARAM_STR);
-    $stmt->bindValue(':saturday', $saturday, PDO::PARAM_STR);
-    $stmt->bindValue(':sunday', $sunday, PDO::PARAM_STR);
-    $stmt->execute();
-
 ?>
 
 
@@ -58,6 +47,8 @@ $stmt = $db->prepare('INSERT INTO days (id, monday, tuesday, wednesday, thursday
           <input type="submit" value="Save">        
       </form>  
 <?php
+        
+$query = "NSERT INTO days (monday, tuesday, wednesday, thursday, friday, saturday, sunday VALUES '$_POST[monday]', '$_POST[tuesday]', '$_POST[wednesday]', '$_POST[thursday]', '$_POST[friday]', '$_POST[saturday]', '$_POST[sunday]')";
                   
 foreach ($db->query('SELECT * FROM days') as $row)
     {
