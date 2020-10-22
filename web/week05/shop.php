@@ -41,6 +41,7 @@ $shoppingList = $db->query('SELECT * FROM shoppingList');
         
 $stmt = $db->prepare('INSERT INTO shoppingList (item) VALUES (:item)');
 $stmt->bindValue(':item', $_POST['textarea'], PDO::PARAM_STR);
+$stmt->execute();
  
 ?>
         </div>
