@@ -44,7 +44,8 @@ $db = get_db();
           <input type="text" id="sat" name="sat" ><br>
           <label for="sun">Sunday:</label>
           <input type="text" id="sun" name="sun"><br>
-          <input type="submit" value="Save">        
+          <input type="submit" value="Save">   
+          </form> 
       
 <?php
           
@@ -61,7 +62,7 @@ $stmt->bindValue(':sunday', $_POST['sun'], PDO::PARAM_STR);
 $stmt->execute();
 
     ?>
-           </form> 
+           
 
     </div>    
     
