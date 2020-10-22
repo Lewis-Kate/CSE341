@@ -58,7 +58,7 @@ $stmt->bindValue(':saturday', $saturday);
 $stmt->bindValue(':sunday', $sunday);
 $stmt->execute();
 
-$daysId = $db->lastInsertId("days_id_seq");
+//$daysId = $db->lastInsertId("days_id_seq");
         
                   
 foreach ($db->query('SELECT * FROM days') as $row)
