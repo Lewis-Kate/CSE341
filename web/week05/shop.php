@@ -13,7 +13,6 @@ $db = get_db();
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Rozha+One&display=swap" rel="stylesheet">
 </head>
-
     
 <body>
 <div class="content">
