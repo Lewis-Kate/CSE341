@@ -29,8 +29,8 @@ $db = get_db();
         <div class ="current">
         
         <h2>Current Menu:</h2>
-            <?php 
-   
+            
+       <?php   
           
 foreach ($db->query('SELECT * FROM days') as $row)
     {
@@ -42,7 +42,24 @@ foreach ($db->query('SELECT * FROM days') as $row)
        echo 'Saturday: ' . $row['saturday'] . '<br>';
        echo 'Sunday: ' . $row['sunday'] . '<br>';
 }
-?>
+?> 
+            
+            <h2>Testing</h2>
+          <?php  
+            $stmt = $db->prepare('SELECT * FROM days WHERE daysId = :id');
+            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+            $stmt->execute();
+            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            foreach ($rows as $row) {
+                    echo 'Monday: ' . $row['monday'] . '<br>';
+                    echo 'Tuesday: ' . $row['tuesday'] . '<br>'; 
+                    echo 'Wednesday: ' . $row['wednesday'] .'<br>';
+                    echo 'Thursday: ' . $row['thursday'] . '<br>';
+                    echo 'Friday: ' . $row['friday'] . '<br>';
+                    echo 'Saturday: ' . $row['saturday'] . '<br>';
+                    echo 'Sunday: ' . $row['sunday'] . '<br>';
+                }
+            ?>
             
         <h2>Current List:</h2>
             
