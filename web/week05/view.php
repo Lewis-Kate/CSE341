@@ -49,7 +49,7 @@ foreach ($db->query('SELECT * FROM days') as $row)
             $stmt = $db->prepare('SELECT * FROM days WHERE daysId = :id');
             $stmt->bindValue(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
-            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $rows = pg_fetch_row($stmt);
             foreach ($rows as $row) {
                     echo 'Monday: ' . $row['monday'] . '<br>';
                     echo 'Tuesday: ' . $row['tuesday'] . '<br>'; 
