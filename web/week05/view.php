@@ -32,7 +32,7 @@ $db = get_db();
             
        <?php   
           
-foreach ($db->query('SELECT * FROM days') as $row)
+foreach ($db->query('SELECT * FROM days ORDER BY daysId LIMIT 1') as $row)
     {
        echo 'Monday: ' . $row['monday'] . '<br>';
        echo 'Tuesday: ' . $row['tuesday'] . '<br>'; 
@@ -49,7 +49,7 @@ foreach ($db->query('SELECT * FROM days') as $row)
             $stmt = $db->prepare('SELECT * FROM days WHERE daysId = :id');
             $stmt->bindValue(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
-            $rows = pg_fetch_row($stmt);
+            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             foreach ($rows as $row) {
                     echo 'Monday: ' . $row['monday'] . '<br>';
                     echo 'Tuesday: ' . $row['tuesday'] . '<br>'; 
