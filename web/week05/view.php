@@ -32,7 +32,7 @@ $db = get_db();
             
        <?php   
           
-foreach ($db->query('SELECT * FROM days ORDER BY daysId LIMIT 1') as $row)
+foreach ($db->query('SELECT * FROM days ORDER BY daysId DESC LIMIT 1') as $row)
     {
        echo 'Monday: ' . $row['monday'] . '<br>';
        echo 'Tuesday: ' . $row['tuesday'] . '<br>'; 
@@ -44,22 +44,7 @@ foreach ($db->query('SELECT * FROM days ORDER BY daysId LIMIT 1') as $row)
 }
 ?> 
             
-            <h2>Testing</h2>
-          <?php
-            $stmt = $db->prepare('SELECT * FROM days WHERE daysId = :id');
-            $stmt->bindValue(':id', $id, PDO::PARAM_INT);
-            $stmt->execute();
-            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            foreach ($rows as $row) {
-                    echo 'Monday: ' . $row['monday'] . '<br>';
-                    echo 'Tuesday: ' . $row['tuesday'] . '<br>'; 
-                    echo 'Wednesday: ' . $row['wednesday'] .'<br>';
-                    echo 'Thursday: ' . $row['thursday'] . '<br>';
-                    echo 'Friday: ' . $row['friday'] . '<br>';
-                    echo 'Saturday: ' . $row['saturday'] . '<br>';
-                    echo 'Sunday: ' . $row['sunday'] . '<br>';
-                }
-            ?>
+            
             
                        
         <h2>Current List:</h2>
@@ -67,7 +52,7 @@ foreach ($db->query('SELECT * FROM days ORDER BY daysId LIMIT 1') as $row)
              <?php 
    
           
-foreach ($db->query('SELECT * FROM shoppingList') as $row)
+foreach ($db->query('SELECT * FROM shoppingList ORDER BY shoppingListId DESC LIMIT 1') as $row)
     {
        echo 'Shopping List: ' . $row['item'] . '<br>';
     }
