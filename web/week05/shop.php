@@ -27,7 +27,7 @@ $db = get_db();
         
         <div class="shop_form">
 
-        <h2>Make Your List</h2>
+        <h2>Create Shopping List</h2>
             
             <form action="shop.php"  method="post">
             <textarea id="shoplist" name="textarea" placeholder="Shopping List"></textarea><br>
@@ -36,13 +36,13 @@ $db = get_db();
         
              <?php 
             
-$shoppingList = $db->query('SELECT * FROM shoppingList');
+                $shoppingList = $db->query('SELECT * FROM shoppingList');
         
-$stmt = $db->prepare('INSERT INTO shoppingList (item) VALUES (:item)');
-$stmt->bindValue(':item', $_POST['textarea'], PDO::PARAM_STR);
-$stmt->execute();
+                $stmt = $db->prepare('INSERT INTO shoppingList (item) VALUES (:item)');
+                $stmt->bindValue(':item', $_POST['textarea'], PDO::PARAM_STR);
+                $stmt->execute();
  
-?>
+            ?>
         </div>
     
     </main>
