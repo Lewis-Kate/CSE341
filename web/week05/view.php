@@ -45,7 +45,8 @@ foreach ($db->query('SELECT * FROM days') as $row)
 ?> 
             
             <h2>Testing</h2>
-          <?php  
+          <?php
+            $id = $db->query('SELECT * FROM days');
             $stmt = $db->prepare('SELECT * FROM days WHERE daysId = :id');
             $stmt->bindValue(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
@@ -61,6 +62,7 @@ foreach ($db->query('SELECT * FROM days') as $row)
                 }
             ?>
             
+                       
         <h2>Current List:</h2>
             
              <?php 
