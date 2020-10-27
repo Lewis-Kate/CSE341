@@ -19,26 +19,26 @@ $db = get_db();
     
     <?php
     
-     $monday = $_GET['monday'];
-     $tuesday = $_GET['tuesday'];
-     $wednesday = $_GET['wednesday'];
-     $thursday = $_GET['thursday'];
-     $friday = $_GET['friday'];
-     $saturday = $_GET['saturday'];
-     $sunday = $_GET['sunday'];
+     $monday = $_POST['monday'];
+     $tuesday = $_POST['tuesday'];
+     $wednesday = $_POST['wednesday'];
+     $thursday = $_POST['thursday'];
+     $friday = $_POST['friday'];
+     $saturday = $_POST['saturday'];
+     $sunday = $_POST['sunday'];
     
-    $del = $db->query('DELETE FROM days WHERE monday = :monday OR tuesday = :tuesday OR wednesday = :wednesday OR thursday = :thursday OR friday = :friday OR saturday = :saturday OR sunday = :sunday');
+    $del ="DELETE FROM days WHERE monday = :monday OR tuesday = :tuesday OR wednesday = :wednesday OR thursday = :thursday OR friday = :friday OR saturday = :saturday OR sunday = :sunday";
     
-    if($del)
-    {
-        close($db);
-        header("locatoin:view.php");
-        exit;
-    }
-    else
+    $result = query($del);
+    
+    if(!$result)
     {
         echo "Error deleting record";
+         exit();
     }
+    close();
+    
+    header('location:view.php');
     ?>
 
 
