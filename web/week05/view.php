@@ -34,13 +34,13 @@ $db = get_db();
           
 foreach ($db->query('SELECT * FROM days ORDER BY daysId DESC LIMIT 1') as $row) { ?>
             
-       <p>Monday: <? echo $row['monday'] ?> </p> <a href="delete.php">Delete</a>
-       <p>Tuesday: <? echo $row['tuesday'] ?> </p> <a href="delete.php">Delete</a>
-       <p>Wednesday: <? echo $row['wednesday'] ?> </p> <a href="delete.php">Delete</a>
-       <p>Thursday: <? echo $row['thursday'] ?> </p> <a href="delete.php">Delete</a>
-       <p>Friday: <? echo $row['friday'] ?> </p> <a href="delete.php">Delete</a>
-       <p>Saturday: <? echo $row['saturday'] ?> </p ><a href="delete.php">Delete</a>
-       <p>Sunday: <? echo $row['sunday'] ?> </p> <a href="delete.php">Delete</a>
+            <p>Monday: <? echo $row['monday'] ?> </p>   <button type=button> <a href="delete.php">Delete</a></button>
+            <p>Tuesday: <? echo $row['tuesday'] ?> </p>   <button type=button> <a href="delete.php">Delete</a></button>
+            <p>Wednesday: <? echo $row['wednesday'] ?> </p> <button type=button> <a href="delete.php">Delete</a></button>
+            <p>Thursday: <? echo $row['thursday'] ?> </p>   <button type=button> <a href="delete.php">Delete</a></button>
+            <p>Friday: <? echo $row['friday'] ?> </p>  <button type=button> <a href="delete.php">Delete</a></button>
+            <p>Saturday: <? echo $row['saturday'] ?> </p >  <button type=button> <a href="delete.php">Delete</a></button>
+            <p>Sunday: <? echo $row['sunday'] ?> </p>   <button type=button> <a href="delete.php">Delete</a></button>
             
         <?php } ?>      
                   
