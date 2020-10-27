@@ -34,17 +34,14 @@ $db = get_db();
           
 foreach ($db->query('SELECT * FROM days ORDER BY daysId DESC LIMIT 1') as $row) { ?>
             
-       <p>Monday: <? echo $row['monday'] ?> </p>
-       <p>Tuesday: <? echo $row['tuesday'] ?> </p>
-       <p>Wednesday: <? echo $row['wednesday'] ?> </p>
-       <p>Thursday: <? echo $row['thursday'] ?> </p>
-       <p>Friday: <? echo $row['friday'] ?> </p>
-       <p>Saturday: <? echo $row['saturday'] ?> </p>
-       <p>Sunday: <? echo $row['sunday'] ?> </p>
-                   
-       <?php } ?>     
-            
-      <input type=button onclick="view.php">Delete Menu <?'DELETE FROM days WHERE monday = :monday;'?>                
+       <p>Monday: <? echo $row['monday'] ?> </p> <a href="delete.php">Delete</a>
+       <p>Tuesday: <? echo $row['tuesday'] ?> </p> <a href="delete.php">Delete</a>
+       <p>Wednesday: <? echo $row['wednesday'] ?> </p> <a href="delete.php">Delete</a>
+       <p>Thursday: <? echo $row['thursday'] ?> </p> <a href="delete.php">Delete</a>
+       <p>Friday: <? echo $row['friday'] ?> </p> <a href="delete.php">Delete</a>
+       <p>Saturday: <? echo $row['saturday'] ?> </p ><a href="delete.php">Delete</a>
+       <p>Sunday: <? echo $row['sunday'] ?> </p> <a href="delete.php">Delete</a>
+                  
         <h2>Current List:</h2>
             
              <?php    
