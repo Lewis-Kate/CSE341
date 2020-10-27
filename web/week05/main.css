@@ -10,7 +10,7 @@
 }
 
 .current a{
-       text-decoration: none;
+    text-decoration: none;
     color: #F1F0FF;
 }
 
@@ -41,7 +41,7 @@ body{
 
 .home h1, .meals h1, .shop h1, .view h1{
    font-family: 'Rozha One', serif; 
-   font-size: 4em;
+   font-size: 6em;
     color: #443266;
  }
 
@@ -77,6 +77,7 @@ body{
 .meal_form h2, .shop_form h2, .current h2{
    font-family: 'Rozha One', serif;
     color: #443266;
+    font-size: 3.5em;
 }
 
 .meal_form input, .shop_form input{
@@ -117,6 +118,13 @@ body{
     padding: 1em;
     margin: 3em; 
    font-family: 'Barlow', sans-serif;
+}
+
+.current p{
+    font-family: 'Barlow', sans-serif;
+     color: #F1F0FF;
+    font-size: 2em;
+
 }
 
 
