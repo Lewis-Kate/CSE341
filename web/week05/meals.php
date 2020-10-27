@@ -22,9 +22,9 @@ $db = get_db();
     
     <div class="meals">    
     <h1>Plan Meals</h1>
-        <button><a href="index.php">Home</a></button>
-        <button><a href="shop.php">Shopping List</a></button>
-        <button><a href="view.php">View Menu</a></button>
+        <button type=button><a href="index.php">Home</a></button>
+        <button type=button><a href="shop.php">Shopping List</a></button>
+        <button type=button><a href="view.php">View Menu</a></button>
     </div>
         
     <div class="meal_form" >

@@ -21,50 +21,39 @@ $db = get_db();
     
     <div class="view">    
     <h1>View Your Menu</h1>
-        <button><a href="index.php">Home</a></button>
-        <button><a href="meals.php">Plan Meals</a></button>
-        <button><a href="shop.php">Shopping List</a></button>
+        <button type=button><a href="index.php">Home</a></button>
+        <button type=button><a href="meals.php">Plan Meals</a></button>
+        <button type=button><a href="shop.php">Shopping List</a></button>
     </div>
         
         <div class ="current">
         
         <h2>Current Menu:</h2>
-            
-       <?php   
-          
-foreach ($db->query('SELECT * FROM days ORDER BY daysId DESC LIMIT 1') as $row)
-    {
-       echo 'Monday: ' . $row['monday'] . '<br>';
-       echo 'Tuesday: ' . $row['tuesday'] . '<br>'; 
-       echo 'Wednesday: ' . $row['wednesday'] .'<br>';
-       echo 'Thursday: ' . $row['thursday'] . '<br>';
-       echo 'Friday: ' . $row['friday'] . '<br>';
-       echo 'Saturday: ' . $row['saturday'] . '<br>';
-       echo 'Sunday: ' . $row['sunday'] . '<br>';
-}
-?> 
-            
-            
-   <h2>test</h2>   
+  
              <?php   
           
 foreach ($db->query('SELECT * FROM days ORDER BY daysId DESC LIMIT 1') as $row) { ?>
             
-       <p>Monday: <? echo $row['monday'] ?> </p>   
-            
+       <p>Monday: <? echo $row['monday'] ?> </p>
+       <p>Tuesday: <? echo $row['tuesday'] ?> </p>
+       <p>Wednesday: <? echo $row['wednesday'] ?> </p>
+       <p>Thursday: <? echo $row['thursday'] ?> </p>
+       <p>Friday: <? echo $row['friday'] ?> </p>
+       <p>Saturday: <? echo $row['saturday'] ?> </p>
+       <p>Sunday: <? echo $row['sunday'] ?> </p>
+                   
        <?php } ?>     
             
-                       
+      <button type=button onclick="view.php">Delete Menu <?'DELETE FROM days WHERE monday = :monday;'?></button>                 
         <h2>Current List:</h2>
             
-             <?php 
-   
+             <?php    
           
-foreach ($db->query('SELECT * FROM shoppingList ORDER BY shoppingListId DESC LIMIT 1') as $row)
-    {
-       echo 'Shopping List: ' . $row['item'] . '<br>';
-    }
-?>
+foreach ($db->query('SELECT * FROM shoppingList ORDER BY shoppingListId DESC LIMIT 1') as $row) { ?>
+            
+      <p>Shopping List: <? echo $row['item'] ?> </p>
+            
+ <?php } ?> 
         
         </div>
     

@@ -23,9 +23,9 @@ $db = get_db();
     
     <div class="home">    
     <h1>Menu Planner</h1>
-        <button><a href="meals.php">Plan Meals</a></button>
-        <button><a href="shop.php">Shopping List</a></button>
-        <button><a href="view.php">View Menu</a></button>
+        <button type=button><a href="meals.php">Plan Meals</a></button>
+        <button type=button><a href="shop.php">Shopping List</a></button>
+        <button type=button><a href="view.php">View Menu</a></button>
     </div>
     
     </main>
