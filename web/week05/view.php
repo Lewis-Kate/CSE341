@@ -44,7 +44,7 @@ foreach ($db->query('SELECT * FROM days ORDER BY daysId DESC LIMIT 1') as $row) 
                    
        <?php } ?>     
             
-      <button type=button onclick="view.php">Delete Menu <?'DELETE FROM days WHERE monday = :monday;'?></button>                 
+      <button type=button>Delete Menu <?'DELETE FROM days WHERE monday = :monday;'?></button>                 
         <h2>Current List:</h2>
             
              <?php    
