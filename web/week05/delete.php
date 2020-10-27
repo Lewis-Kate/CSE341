@@ -27,7 +27,7 @@ $db = get_db();
      $saturday = $_GET['saturday'];
      $sunday = $_GET['sunday'];
     
-    $del = query($db, "DELETE FROM days WHERE id = '$id'");
+    $del = $db->query('DELETE FROM days WHERE monday = :monday OR tuesday = :tuesday OR wednesday = :wednesday OR thursday = :thursday OR friday = :friday OR saturday = :saturday OR sunday = :sunday');
     
     if($del)
     {
