@@ -1,3 +1,16 @@
+.current a {
+    text-decoration: none;
+    color: #F1F0FF;
+    margin: 1em;
+    font-family: 'Barlow', sans-serif;
+    width: 10em;
+    height: 2.5em;
+    text-align: center;
+    background-color: #443266; 
+    border: 2px solid #F1F0FF;
+    border-radius: 10px;
+}
+
 body{
  background-color: #C3C3E5;
 }
@@ -37,18 +50,7 @@ body{
     color: #F1F0FF;
 }
 
-.current a {
-    text-decoration: none;
-    color: #F1F0FF;
-    margin: 1em;
-    font-family: 'Barlow', sans-serif;
-    width: 10em;
-    height: 2.5em;
-    text-align: center;
-    background-color: #443266; 
-    border: 2px solid #F1F0FF;
-    border-radius: 10px;
-}
+
 
 .meal_form, .shop_form {
     display: flex;
