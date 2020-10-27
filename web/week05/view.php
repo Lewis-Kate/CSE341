@@ -45,6 +45,14 @@ foreach ($db->query('SELECT * FROM days ORDER BY daysId DESC LIMIT 1') as $row)
 ?> 
             
             
+   <h2>test</h2>   
+             <?php   
+          
+foreach ($db->query('SELECT * FROM days ORDER BY daysId DESC LIMIT 1') as $row) { ?>
+            
+       <p>Monday: </p> <?= $row['monday'] ?>   
+            
+            
             
                        
         <h2>Current List:</h2>
