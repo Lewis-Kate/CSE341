@@ -1,7 +1,5 @@
 .current button {
-    text-decoration: none;
-    color: #F1F0FF;
-    margin: 1em;
+     margin: 1em;
     font-family: 'Barlow', sans-serif;
     width: 15em;
     height: 2.8em;
@@ -9,6 +7,11 @@
     background-color: #443266; 
     border: 2px solid #F1F0FF;
     border-radius: 10px;
+}
+
+.current a{
+       text-decoration: none;
+    color: #F1F0FF;
 }
 
 body{
@@ -112,8 +115,8 @@ body{
     border: 2px solid #F1F0FF;
     border-radius: 10px;
     padding: 1em;
-   margin: 3em; 
-  font-family: 'Barlow', sans-serif;
+    margin: 3em; 
+   font-family: 'Barlow', sans-serif;
 }
 
 
