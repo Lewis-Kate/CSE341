@@ -21,11 +21,19 @@ body{
  color:  #F1F0FF;
 }
 
-.home, .meals, .shop, .view{
+.home, .meals, .shop {
     display: flex;
     flex-flow: column nowrap; 
     justify-content: center;
     align-items: center;
+}
+
+.view{
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .home h1, .meals h1, .shop h1, .view h1{
