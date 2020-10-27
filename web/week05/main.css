@@ -12,6 +12,7 @@
 .current a{
     text-decoration: none;
     color: #F1F0FF;
+    font-size: 1.3em;
 }
 
 body{
@@ -59,6 +60,7 @@ body{
 .home a, .meals a, .shop a, .view a{
     text-decoration: none;
     color: #F1F0FF;
+    font-size: 1.3em;
 }
 
 
@@ -72,6 +74,7 @@ body{
      border: 2px solid #F1F0FF;
     border-radius: 10px;
     margin: 3em;
+    font-size: 1.3em;
  }
 
 .meal_form h2, .shop_form h2, .current h2{
@@ -97,6 +100,7 @@ body{
     background-color: #443266; 
     border: 2px solid #F1F0FF;
     border-radius: 10px;
+    font-size: 1.3em;
 }
 
 
