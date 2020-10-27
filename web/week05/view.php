@@ -50,7 +50,7 @@ foreach ($db->query('SELECT * FROM days ORDER BY daysId DESC LIMIT 1') as $row)
           
 foreach ($db->query('SELECT * FROM days ORDER BY daysId DESC LIMIT 1') as $row) { ?>
             
-       <p>Monday: </p> <?= $row['monday'] ?>   
+       <p>Monday: <? echo $row['monday'] ?> </p>   
             
             
             
