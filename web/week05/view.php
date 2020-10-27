@@ -52,7 +52,7 @@ foreach ($db->query('SELECT * FROM days ORDER BY daysId DESC LIMIT 1') as $row) 
             
        <p>Monday: <? echo $row['monday'] ?> </p>   
             
-            
+       <?php } ?>     
             
                        
         <h2>Current List:</h2>
