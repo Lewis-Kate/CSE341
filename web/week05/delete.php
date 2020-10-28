@@ -23,31 +23,30 @@ $db = get_db();
     <?php
     
     switch ($action){
-    case "delete":  
-     $monday = $_POST['monday'];
-     $tuesday = $_POST['tuesday'];
-     $wednesday = $_POST['wednesday'];
-     $thursday = $_POST['thursday'];
-     $friday = $_POST['friday'];
-     $saturday = $_POST['saturday'];
-     $sunday = $_POST['sunday'];
+    case "delete":
+            
+     $monday = filter_input(INPUT_POST, 'monday');
+     $tuesday = filter_input(INPUT_POST, 'tuesday');
+     $wednesday = filter_input(INPUT_POST, 'wednesday');
+     $thursday = filter_input(INPUT_POST, 'thursday');
+     $friday = filter_input(INPUT_POST, 'friday');
+     $saturday = filter_input(INPUT_POST, 'saturday');
+     $sunday = filter_input(INPUT_POST, 'sunday');
     
-    $stmt = $db->prepare;
-    $del ="DELETE FROM days WHERE monday = :monday OR tuesday = :tuesday OR wednesday = :wednesday OR thursday = :thursday OR friday = :friday OR saturday = :saturday OR sunday = :sunday";
+    $stmt = $db->prepare("DELETE FROM days WHERE monday = :monday OR tuesday = :tuesday OR wednesday = :wednesday OR thursday = :thursday OR friday = :friday OR saturday = :saturday OR sunday = :sunday");
+    $stmt -> bindValue(':monday', $monday);
+    $stmt -> bindValue(':tuesday', $tuesday);
+    $stmt -> bindValue(':wednesday', $wednesday);
+    $stmt -> bindValue(':thursday', $thursday);
+    $stmt -> bindValue(':friday', $friday);
+    $stmt -> bindValue(':saturday', $saturday);
+    $stmt -> bindValue(':sunday', $sunday);
     
-    $result = query($del);
+    $stmt->execute();
+    $stmt->closeCursor();
+    header('Location: view.php');
     
-    if(!$del)
-    {
-         header('Location: index.php');
-            exit;
-            break;
-    }
-   $stmt->execute();
-   $stmt->closeCursor();
-    
-    header('Location:view.php');
-            break;
+   
     }
     ?>
 
