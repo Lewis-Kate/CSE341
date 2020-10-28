@@ -48,6 +48,7 @@ $db = get_db();
     
     header('Location:view.php');
             break;
+    }
     ?>
 
 
