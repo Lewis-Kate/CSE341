@@ -11,11 +11,12 @@ if ($action == NULL) {
 switch ($action){
     case "register":
         $username = filter_input(INPUT_POST, 'username');
-        $password = filter_password(INPUT_POST, 'password');
+        $password = filter_input(INPUT_POST, 'password');
+        $passwordhash = password_hash($password, PASSWORD_DEFAULT);
         
         $stmt = $db->prepare('INSERT INTO users (username, password) VALUES(:username, :password)');
         $stmt -> bindValue(':username', $username);
-        $stmt -> bindValue(':password', $password);
+        $stmt -> bindValue(':password', $passwordhash);
         
         $stmt->execute();
 }
