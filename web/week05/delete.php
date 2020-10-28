@@ -17,28 +17,13 @@ $db = get_db();
 
     <h1>Delete</h1>
     
-    
-    switch ($action){
-    case "register":
-        $username = filter_input(INPUT_POST, 'username');
-        $password = filter_input(INPUT_POST, 'password');
-        $passwordhash = password_hash($password, PASSWORD_DEFAULT);
-        
-        $stmt = $db->prepare('INSERT INTO users (username, password) VALUES(:username, :password)');
-        $stmt -> bindValue(':username', $username);
-        $stmt -> bindValue(':password', $passwordhash);
-        
-        $stmt->execute();
-        $stmt->closeCursor();
-        header('Location: sign-in.php');
-        
-        break;
+
     
     
     <?php
     
-    switch ($delete){
-            
+    switch ($action){
+    case "delete":  
      $monday = $_POST['monday'];
      $tuesday = $_POST['tuesday'];
      $wednesday = $_POST['wednesday'];
