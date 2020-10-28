@@ -29,7 +29,7 @@ body{
     color: #443266;
  }
 
-.home button, .meals button, .shop button, .view button, .current_form inpu{
+.home button, .meals button, .shop button, .view button, .current_form input{
     margin: 1em;
     font-family: 'Barlow', sans-serif;
     width: 10em;
