@@ -9,12 +9,12 @@ $db = get_db();
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Sign-Up</title>
-    <meta name="Sign-Up" content ="Sign-Up Index">
+    <title>Sign-In</title>
+    <meta name="Sign-In" content ="Sign-In">
 </head>
     
 <body>
-    <h1>Sign Up</h1>
+    <h1>Sign In</h1>
 <form action="index.php" method="POST">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username">
@@ -22,8 +22,8 @@ $db = get_db();
     <label for="password">Password:</label>
     <input type="text" id="password" name="password">  
     
-    <input type="submit" value="Submit">
-    <input type="hidden" name="action" value="register">
+    <input type="submit" value="Login">
+    <input type="hidden" name="action" value="login">
 </form>    
     
 </body>

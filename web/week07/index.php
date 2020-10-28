@@ -19,5 +19,33 @@ switch ($action){
         $stmt -> bindValue(':password', $passwordhash);
         
         $stmt->execute();
+        $stmt->closeCursor();
+        header('Location: sign-in.php');
+        
+        break;
+        
+    case "login":
+        $username = filter_input(INPUT_POST, 'username');
+        $password = filter_input(INPUT_POST, 'password');
+        
+        $stmt = $db->prepare('SELECT id, password FROM users WHERE username = :username;');
+        $stmt -> bindValue(':username', $username);
+     
+        $stmt->execute();
+        $dbpass = $stmt-> fetch();
+        $stmt->closeCursor();
+        $hashcheck = password_verify($password, $dbpass['password']);
+        
+        if(!$hashcheck){
+            header('Location: sign-in.php');
+            exit;
+            break;
+        }
+        
+        $_SESSION['user_id'] = $dbpass['id'];
+        header('Location: welcome.php');
+        
+        break;
 }
+
 
