@@ -29,47 +29,56 @@ $db = get_db();
         <div class ="current">
         
         <h2>Current Menu:</h2>
-  
+  <form action="delete.php" method="POST">
+
              <?php   
           
 foreach ($db->query('SELECT * FROM days ORDER BY daysId DESC LIMIT 1') as $row) { ?>
             
             <div class="del">
             <p>Monday: <? echo $row['monday'] ?> </p>   
-            <button type=button> <a href="delete.php">Delete</a></button>
+            <input type="submit" value="Delete">
+            <input type="hidden" name="action" value="delete">
             </div>
             
             <div class="del">
             <p>Tuesday: <? echo $row['tuesday'] ?> </p>   
-            <button type=button> <a href="delete.php">Delete</a></button>
+            <input type="submit" value="Delete">
+            <input type="hidden" name="action" value="delete">
             </div>
             
             <div class="del">
             <p>Wednesday: <? echo $row['wednesday'] ?> </p> 
-            <button type=button> <a href="delete.php">Delete</a></button>
+            <input type="submit" value="Delete">
+            <input type="hidden" name="action" value="delete">
             </div>
             
             <div class="del">
             <p>Thursday: <? echo $row['thursday'] ?> </p>   
-            <button type=button> <a href="delete.php">Delete</a></button>
+            <input type="submit" value="Delete">
+            <input type="hidden" name="action" value="delete">
             </div>
             
             <div class="del">
             <p>Friday: <? echo $row['friday'] ?> </p>  
-            <button type=button> <a href="delete.php">Delete</a></button>
+            <input type="submit" value="Delete">
+            <input type="hidden" name="action" value="delete">
             </div>
             
             <div class="del">
             <p>Saturday: <? echo $row['saturday'] ?> </p >  
-            <button type=button> <a href="delete.php">Delete</a></button>
+            <input type="submit" value="Delete">
+            <input type="hidden" name="action" value="delete">
             </div>
             
             <div class="del">
             <p>Sunday: <? echo $row['sunday'] ?> </p>   
-            <button type=button> <a href="delete.php">Delete</a></button>
+            <input type="submit" value="Delete">
+            <input type="hidden" name="action" value="delete">
             </div>
             
-        <?php } ?>      
+        <?php } ?> 
+            </form>
                   
         <h2>Current List:</h2>
             
