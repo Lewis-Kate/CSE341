@@ -38,7 +38,7 @@ $db = get_db();
     }
     close();
     
-    header('location:view.php');
+    header('Location:view.php');
     ?>
 
 
