@@ -29,7 +29,7 @@ $db = get_db();
         <div class ="current">
         
         <h2>Current Menu:</h2>
-  <form action="delete.php" method="POST">
+  <form action="delete.php" method="post">
 
              <?php   
           
