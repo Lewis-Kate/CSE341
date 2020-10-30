@@ -140,5 +140,8 @@ body{
     margin: 1em;
     text-align: center;
     width: 15em;
+     font-family: 'Barlow', sans-serif;
+     color: #443266;
+    background-color: #F1F0FF;
 }
 
