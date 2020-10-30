@@ -38,43 +38,43 @@ foreach ($db->query('SELECT * FROM days ORDER BY daysId DESC LIMIT 1') as $row) 
             <div class="del">
             <p>Monday: <? echo $row['monday'] ?> </p>   
             <input type="submit" id="del" value="Delete">
-            <input type="hidden" name="action" value="delete">
+            <input type="hidden" name="action" value="mon">
             </div>
             
             <div class="del">
             <p>Tuesday: <? echo $row['tuesday'] ?> </p>   
             <input type="submit" id="del" value="Delete">
-            <input type="hidden" name="action" value="delete">
+            <input type="hidden" name="action" value="tues">
             </div>
             
             <div class="del">
             <p>Wednesday: <? echo $row['wednesday'] ?> </p> 
             <input type="submit" id="del" value="Delete">
-            <input type="hidden" name="action" value="delete">
+            <input type="hidden" name="action" value="wed">
             </div>
             
             <div class="del">
             <p>Thursday: <? echo $row['thursday'] ?> </p>   
             <input type="submit" id="del" value="Delete">
-            <input type="hidden" name="action" value="delete">
+            <input type="hidden" name="action" value="thurs">
             </div>
             
             <div class="del">
             <p>Friday: <? echo $row['friday'] ?> </p>  
             <input type="submit" id="del" value="Delete">
-            <input type="hidden" name="action" value="delete">
+            <input type="hidden" name="action" value="fri">
             </div>
             
             <div class="del">
             <p>Saturday: <? echo $row['saturday'] ?> </p >  
             <input type="submit" id="del" value="Delete">
-            <input type="hidden" name="action" value="delete">
+            <input type="hidden" name="action" value="sat">
             </div>
             
             <div class="del">
             <p>Sunday: <? echo $row['sunday'] ?> </p>   
             <input type="submit" id="del" value="Delete">
-            <input type="hidden" name="action" value="delete">
+            <input type="hidden" name="action" value="sun">
             </div>
             
         <?php } ?> 
