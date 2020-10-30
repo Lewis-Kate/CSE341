@@ -36,38 +36,38 @@ $db = get_db();
 foreach ($db->query('SELECT * FROM days ORDER BY daysId DESC LIMIT 1') as $row) { ?>
             
             <div class="del">
-            <p>Monday: <? echo $row['monday'] ?> </p> 
-            <input type="text" id="monday" name="monday">
+            <p>Monday: <?php echo $row['monday'] ?> </p> 
+            <input type="text" id="monday" name="monday" value= "<?php echo $row['monday']?>">
             </div>
             
             <div class="del">
-            <p>Tuesday: <? echo $row['tuesday'] ?> </p> 
-            <input type="text" id="tuesday" name="tuesday">
+            <p>Tuesday: <?php echo $row['tuesday'] ?> </p> 
+            <input type="text" id="tuesday" name="tuesday" value="<?php echo $row['tuesday'] ?>">
             </div>
             
             <div class="del">
-            <p>Wednesday: <? echo $row['wednesday'] ?> </p>
-            <input type="text" id="wednesday" name="wednesday">                
+            <p>Wednesday: <?php echo $row['wednesday'] ?> </p>
+            <input type="text" id="wednesday" name="wednesday" value="<?php echo $row['wednesday'] ?>">                
             </div>
             
             <div class="del">
-            <p>Thursday: <? echo $row['thursday'] ?> </p> 
-            <input type="text" id="thursday" name="thursday">
+            <p>Thursday: <?php echo $row['thursday'] ?> </p> 
+            <input type="text" id="thursday" name="thursday" value="<?php echo $row['thursday'] ?>">
             </div>
             
             <div class="del">
-            <p>Friday: <? echo $row['friday'] ?> </p>
-            <input type="text" id="friday" name="friday">
+            <p>Friday: <?php echo $row['friday'] ?> </p>
+            <input type="text" id="friday" name="friday" value="<?php echo $row['friday'] ?>">
             </div>
             
             <div class="del">
-            <p>Saturday: <? echo $row['saturday'] ?> </p>
-            <input type="text" id="saturday" name="saturday">
+            <p>Saturday: <?php echo $row['saturday'] ?> </p>
+            <input type="text" id="saturday" name="saturday" value="<?php echo $row['saturday'] ?> ">
             </div>
             
             <div class="del">
-            <p>Sunday: <? echo $row['sunday'] ?> </p>   
-            <input type="text" id="sunday" name="sunday">
+            <p>Sunday: <?php echo $row['sunday'] ?> </p>   
+            <input type="text" id="sunday" name="sunday" value =" <?php echo $row['sunday'] ?> ">
             </div>
        <input type="hidden" name="daysId" value= "<?php echo $row['daysid']?>">      
        <input type="submit" id="del" value="Update">

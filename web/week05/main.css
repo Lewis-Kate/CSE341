@@ -133,4 +133,12 @@ body{
     justify-content: space-between;
 }
 
+.del input{
+    border: 2px solid #443266;
+    border-radius: 10px;
+   padding: .5em;
+    margin: 1em;
+    text-align: center;
+    width: 15em;
+}
 
